@@ -23,4 +23,4 @@ Django Authenticator is a Django-based authentication system providing essential
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/a-adeyori/Authenticator_Page
+   git clone https://github.com/a-adeyori/Django_Authenticator
