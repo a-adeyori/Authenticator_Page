@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'assets/css/login.css' %}" />
+    <title>Login Now</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading">
+        <h1>Login Now</h1>
+        {% if messages %} {% for message in messages %}
+        <h5>{{ message }}</h5>
+        {% endfor %} {% endif %}
+      </div>
+
+      <form method="POST" action="login">
+        {% csrf_token %}
+        <input
+          class="field"
+          placeholder="Username"
+          type="text"
+          name="username"
+          required
+        />
+        <input
+          class="field"
+          placeholder="Password"
+          type="password"
+          name="password"
+          required
+        />
+        <input class="submit_button" type="submit" value="Login" />
+      </form>
+
+      <a class="register-link" href="signup">Sign up</a>
+    </div>
+  </body>
+</html>

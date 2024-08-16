@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'assets/css/signup.css' %}">
+    <title>Sign Up</title>
+
+</head>
+<body>
+    <h1>Sign Up below</h1>
+    {% if messages %}
+        {% for message in messages %}
+        <h5>{{message}}</h5>
+        {% endfor %}
+    {% endif %}
+
+
+    <form method = 'POST' action = 'register'>
+        {% csrf_token %}
+        <p>Username: </p>
+        <input type = 'text' name="username">
+        <p>Email: </p>
+        <input type="email" name = 'email'>
+        <p>Password: </p>
+        <input type="password" name = 'password'>
+        <p>Confirm Password: </p>
+        <input type="password" name = 'c_password'> <br>
+        <input type="submit">
+    </form>
+</body>
+</html>
