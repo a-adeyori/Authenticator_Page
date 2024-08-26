@@ -1,5 +1,13 @@
 # Django Authenticator
 
+## Preview
+
+
+
+https://github.com/user-attachments/assets/823e627f-a4d4-45c0-b266-a86c29988c7b
+
+
+
 ## Overview
 
 Django Authenticator is a Django-based authentication system providing essential features for user management, database management, including registration, login, and logout. This project demonstrates a simple implementation of user authentication with Django.
